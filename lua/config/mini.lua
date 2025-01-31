@@ -33,7 +33,7 @@ starter.setup({
 	starter.gen_hook.adding_bullet(' ', true),
 	starter.gen_hook.aligning('center','top'),
 	starter.gen_hook.indexing('all', {'Builtin actions'}),
-	starter.gen_hook.padding(0,9)
+	starter.gen_hook.padding(0,8)
     },
     footer = ""
 })

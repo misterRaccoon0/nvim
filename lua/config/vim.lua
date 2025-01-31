@@ -41,12 +41,14 @@ map(
     "<M-[>",
     function()
 	if (hasMultipleBuffer()) then
-	    vim.api.nvim_command('bprev')
+	    vim.api.nvim_command[[bprev]]
 	end
     end,
     {
 	desc = "Goto Previous Buffer",
-	noremap = false
+	nowait = true,
+	noremap = true,
+	silent = true
     }
 )
 map(
@@ -54,12 +56,14 @@ map(
     "<M-]>",
     function ()
 	if (hasMultipleBuffer()) then
-	    vim.api.nvim_command('bnext')
+	    vim.api.nvim_command[[bnext]]
 	end
     end,
     {
 	desc = "Goto Next Buffer",
-	noremap = false
+	nowait = true,
+	noremap = true,
+	silent = true
     }
 )
 
@@ -67,11 +71,13 @@ map(
     {'n','i'},
     "<C-q>",
 	function ()
-	    vim.api.nvim_command('bwipeout')
+	    vim.api.nvim_command[[bwipeout]]
 	end,
     {
 	desc = "Close Buffer",
-	noremap = false
+	nowait = true,
+	noremap = true,
+	silent = true
     }
 )
 

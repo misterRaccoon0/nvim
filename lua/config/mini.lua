@@ -27,7 +27,7 @@ starter.setup({
     }, '\n'),
     evaluate_single = true,
     items = {
-	starter.sections.telescope()
+	starter.sections.telescope(),
     },
     content_hooks = {
 	starter.gen_hook.adding_bullet(' ', true),

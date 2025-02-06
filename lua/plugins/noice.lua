@@ -24,10 +24,23 @@ return {
 		},
 		opts = { skip = true }
 	    }
-	}
+	},
     },
     dependencies = {
 	"MunifTanjim/nui.nvim",
-	"rcarriga/nvim-notify",
+	{
+	    "rcarriga/nvim-notify",
+	    config = function()
+		local notify = require("notify")
+		notify.setup({
+		    render = "minimal",
+		    timeout = 500,
+		    background_colour = "#000000",
+		    on_open = function(win)
+			vim.api.nvim_win_set_config(win, {focusable = false})
+		    end
+		})
+	    end
+	},
     }
 }

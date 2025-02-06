@@ -62,12 +62,16 @@ return {
 		    fallback()
 		  end
 		end, { "i", "s" }),
+		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.abort(),
 	    },
 	    sources = cmp.config.sources(
 		{
+		    { 
+			name = 'luasnip',
+			option = { use_show_condition = false }
+		    },
 		    { name = 'nvim_lsp' },
-		    { name = 'luasnip' },
 		},
 		{
 		    { name = 'buffer' }

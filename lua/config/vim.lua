@@ -131,7 +131,7 @@ map(
 map(
     {'n', 'i'},
     "<C-\\>",
-    ":"
+    "<Esc>:"
     ,
     {
 	desc = "Open commandline",

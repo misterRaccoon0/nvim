@@ -6,12 +6,11 @@ local vim = vim
 --
 vim.o.number = true
 vim.o.shiftwidth = 4
--- vim.cmd[[colorscheme gruvbox]]
 vim.opt.fillchars =  {eob = " "}
 
 vim.opt.termguicolors = true
--- vim custom base keymap
 
+-- vim custom base keymap
 local map = vim.keymap.set
 
 -- map opts autofill function
@@ -142,7 +141,3 @@ map(
 -- window size operations
 nmap("<C-w>[", "<C-w><", {desc = "Decrease Window Width", noremap = false})
 nmap("<C-w>]", "<C-w>>", {desc = "Increase Window Width", noremap = false})
-
-
-
-

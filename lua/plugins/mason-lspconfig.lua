@@ -63,6 +63,8 @@ return {
 		  end
 		end, { "i", "s" }),
 		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-n>"] = cmp.mapping.scroll_docs(1),
+		["<C-b>"] = cmp.mapping.scroll_docs(-1),
 		["<C-e>"] = cmp.mapping.abort(),
 	    },
 	    sources = cmp.config.sources(
